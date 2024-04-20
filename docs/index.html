@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Popover Sample</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="HTML popover attribute example." />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <link href="css/styles.min.css" rel="stylesheet">
+  <style>
+    :popover-open::backdrop {
+      background-color: rgb(0, 0, 0, 0.75);
+    }
+  </style>
+</head>
+
+<body class="flex flex-col min-h-dvh text-gray-900">
+  <header class="flex items-center py-6 px-4 bg-gray-900 text-white">
+    <h1 class="font-bold text-lg w-full text-center">HTML Popover Sample</h1>
+    <div class="mr-auto shrink-0 w-12 flex items-center justify-end">
+      <a class="w-8 h-8 rounded-full text-white" href="https://github.com/burnworks/html-popover-sample"
+        target="_blank">
+        <span class="w-full h-full" aria-hidden="true">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>
+        <span class="sr-only">GitHub (burnworks/html-popover-sample)</span>
+      </a>
+    </div>
+  </header>
+  <main class="pt-16 pb-24 px-4">
+    <button popovertarget="menu"
+      class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">メニューを開く</button>
+    <nav id="menu" popover="auto" class="w-full max-w-5xl mx-auto pb-6 bg-white shadow rounded-lg">
+      <div class="flex flex-col-reverse">
+        <ul class="px-4 space-y-1">
+          <li><a href="#"
+              class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 pl-3 text-sm leading-6 font-semibold">メニュー01</a>
+          <li><a href="#"
+              class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 pl-3 text-sm leading-6 font-semibold">メニュー02</a>
+          <li><a href="#"
+              class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 pl-3 text-sm leading-6 font-semibold">メニュー03</a>
+        </ul>
+        <div class="flex justify-end p-2">
+          <button popovertarget="menu" popovertargetaction="hide" aria-label="メニューを閉じる"
+            class="rounded-full size-8 flex items-center justify-center bg-white hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" role="img" class="w-4 h-4">
+              <title>メニューを閉じる</title>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="mt-auto text-center py-10 px-4 bg-gray-50 text-gray-600">
+    <address class="not-italic">
+      <small class="text-sm">by <a class="underline hover:no-underline" href="https://twitter.com/burnworks"
+          target="_blank">@burnworks</a></small>
+    </address>
+  </footer>
+</body>
+
+</html>
